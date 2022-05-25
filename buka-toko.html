@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buka Toko</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="splide/dist/css/splide.min.css">
+    <link rel="stylesheet" href="swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <div class="col-12 col-md-4 mx-auto" style="background-color: #FFFBFF;">
+        <div id="header" class="p-3 fixed-top">
+            <div class="d-flex align-items-center col-md-4 mx-md-auto">
+                <i class="fas fa-arrow-left text-white me-3" onclick="goBack()"></i>
+                <div id="logo">
+                    Buka Toko
+                </div>
+            </div>
+
+        </div>
+        <br>
+
+        <div class="container p-4 text-center bg-white" style="font-size: 14px;">
+            <br>
+            <br>
+            <img src="assets/image/etoko.png" alt="" width="100px" class="foto-profile">
+            <br>
+            <br>
+            <form action="" class="form text-start">
+                <div class="row mb-3">
+                    <label for="foto" class="col-sm-2 col-form-label">Pilih Foto</label>
+                    <div class="col-sm-10">
+                        <input type="file" class="form-control" id="foto">
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <label for="username" class="col-sm-2 col-form-label">Nama Toko</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="username" value="nizar">
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-6">
+                        <label for="buka" class="col-sm-2 col-form-label">Buka Dari</label>
+                        <select name="" id="" class="form-select">
+                            <option value="senin">Senin</option>
+                            <option value="selasa">Selasa</option>
+                            <option value="rabu">Rabu</option>
+                            <option value="kamis">Kamis</option>
+                            <option value="jumat">Jumat</option>
+                            <option value="sabtu">Sabtu</option>
+                            <option value="minggu">Minggu</option>
+                        </select>
+                    </div>
+                    <div class="col-6">
+                        <label for="tutup" class="col-sm-2 col-form-label">Sampai</label>
+                        <select name="" id="" class="form-select">
+                            <option value="senin">Senin</option>
+                            <option value="selasa">Selasa</option>
+                            <option value="rabu">Rabu</option>
+                            <option value="kamis">Kamis</option>
+                            <option value="jumat">Jumat</option>
+                            <option value="sabtu">Sabtu</option>
+                            <option value="minggu">Minggu</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-6">
+                        <label for="buka" class="col-sm-2 col-form-label">Jam Buka</label>
+                        <input type="time" class="form-control" id="tutup" value="">
+                    </div>
+                    <div class="col-6">
+                        <label for="tutup" class="col-sm-2 col-form-label">Jam Tutup</label>
+                        <input type="time" class="form-control" id="tutup" value="">
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <label for="desa" class="col-sm-2 col-form-label">Nama Desa</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="desa" value="" placeholder="Nama desa...">
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <label for="kampung" class="col-sm-2 col-form-label">Nama dusun/kampung</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="kampung" value="" placeholder="Kampung/dusun">
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-6">
+                        <label for="rt" class="col-sm-2 col-form-label">RT</label>
+                        <input type="number" class="form-control" id="rt" value="" placeholder="RT...">
+                    </div>
+                    <div class="col-6">
+                        <label for="rw" class="col-sm-2 col-form-label">RW</label>
+                        <input type="number" class="form-control" id="rw" value="" placeholder="RW...">
+                    </div>
+                </div>
+                <br>
+                <a href="home.html" class="btn btn-success w-100">Daftar Toko</a>
+                <!-- <button type="submit" class="btn btn-primary w-100">Update Profile</button> -->
+            </form>
+
+        </div>
+        <br>
+
+    </div>
+
+
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="splide/dist/js/splide.min.js"></script>
+    <script src="swiper/swiper-bundle.min.js"></script>
+    <script src="assets/js/script.js"></script>
+
+</body>
+
+</html>

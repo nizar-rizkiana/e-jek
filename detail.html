@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="splide/dist/css/splide.min.css">
+    <link rel="stylesheet" href="swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <div class="col-12 col-md-4 mx-auto" style="background-color: #F8F8F8;">
+
+        <div id="detail-produk">
+            <!-- tombol kembali -->
+            <div class="back position-absolute p-3" style="z-index: 99;">
+                <i class="fas fa-arrow-circle-left text-secondary" style="font-size: 30px; opacity: 0.8;"
+                    onclick="goBack()"></i>
+            </div>
+            <!-- end tombol kembali -->
+            <div class="image-detail mb-2 bg-white">
+                <img src="assets/image/burger.png" alt="gambar detail produk">
+            </div>
+            <div class="harga bg-white p-3 mb-2">
+                <p class="mb-0">Hamburger Plus cola</p>
+                <p class="text-harga fw-bold mb-0">Rp. 70.000</p>
+                <div class="qty text-end">
+                    <i id="kurang" class="fas fa-minus-circle text-secondary qty-min"></i>&nbsp;
+                    <span id="qty" class="text-qty fw-bold">1</span>&nbsp;
+                    <i id="tambah" class="fas fa-plus-circle text-secondary qty-plus"></i>
+
+                    <script>
+                        // tombol tambah
+                        document.getElementById('tambah').onclick = function () {
+                            document.getElementById('qty').innerText = parseInt(document.getElementById(
+                                    'qty')
+                                .textContent) + 1;
+                        }
+                        // tombol kurang
+                        document.getElementById('kurang').onclick = function () {
+                            if (document.getElementById('qty').textContent != 1) {
+                                document.getElementById('qty').innerText = parseInt(document
+                                    .getElementById(
+                                        'qty')
+                                    .textContent) - 1;
+                            }
+                        }
+                    </script>
+                </div>
+            </div>
+            <div class="toko bg-white d-flex p-3 mb-2" style="font-size: 12px;">
+                <div class="image-toko">
+                    <img src="assets/image/etoko.png" alt="">
+                </div>
+                <div class="detail-toko mx-2">
+                    <p class="mb-0 fw-bold">KFC Lite</p>
+                    <i class="fa-solid fa-location-dot text-muted"></i>&nbsp;<small class="text-muted">Cimanying</small>
+                </div>
+                <div class="ms-4 buka-tutup text-secondary">
+                    <span>Senin - Jumat</span><br>
+                    <span>07.00 - 21.00</span>
+                </div>
+            </div>
+            <div class="deskripsi bg-white p-3" style="font-size: 14px;">
+                <p>Deskripsi</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum laudantium, ut ex explicabo magni vel
+                    laborum nam fuga aspernatur veritatis, eveniet quos suscipit iusto quae?</p>
+            </div>
+        </div>
+        <br>
+        <br>
+        <br>
+        <div class="proses p-3 fixed-bottom d-flex justify-content-between bg-white border-top">
+            <a href="checkout.html" class="btn btn-outline-success rounded-pill w-50 me-4">checkout</a>
+            <a href="keranjang.html" class="btn btn-success rounded-pill w-50">+ keranjang</a>
+        </div>
+    </div>
+
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="splide/dist/js/splide.min.js"></script>
+    <script src="swiper/swiper-bundle.min.js"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>

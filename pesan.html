@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail Transaksi</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="splide/dist/css/splide.min.css">
+    <link rel="stylesheet" href="swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <div class="col-12 col-md-4 mx-auto" style="background-color: #FFFBFF;">
+        <div id="header" class="p-2 fixed-top">
+            <div class="d-flex align-items-center">
+                <i class="fas fa-arrow-left text-white" onclick="goBack()"></i>
+                <div id="logo" class="d-flex ms-2 align-items-center">
+                    <div class="profile me-2">
+                        <img src="assets/image/avatar.png" alt="" style="width: 40px;height: 40px; border: 50%;">
+                    </div>
+                    <p class="username mb-0 fw-bold">Philip</p>
+                </div>
+            </div>
+        </div>
+        <br>
+        <br>
+        <br>
+
+
+        <div class="container">
+            <div id="chat-area">
+                <div class="chat-box">
+                    <span class="pengirim rounded-pill p-2 px-3 border bg-white">
+                        halo mass!!
+                    </span>
+                </div><br>
+                <div class="chat-box text-end">
+                    <span class="penerima rounded-pill p-2 px-3 border">
+                        iya ada apa?
+                    </span>
+                </div><br>
+            </div>
+
+        </div>
+        <div class="fixed-bottom bg-white p-2 d-flex border-top align-items-center">
+            <input id="input-chat" placeholder="Ketik pesan ..." class="border p-2 rounded-pill w-100"
+                style="font-size: 14px;" onkeydown="enterSend(this)">
+            <i class="fas fa-paper-plane ms-2" style="color: #00AA13; font-size: 22px;" onclick="sendMessage()"></i>
+        </div>
+
+    </div>
+
+    <script>
+        function sendMessage() {
+            document.getElementById('chat-area').innerHTML = document.getElementById('chat-area').innerHTML +
+                '<div class="chat-box text-end">' +
+                '<span class="penerima rounded-pill p-2 px-3 border">' +
+                document.getElementById('input-chat').value +
+                '</span>' +
+                '</div><br>';
+            document.getElementById('input-chat').value = '';
+        }
+
+        function enterSend(ele) {
+            if (event.key === 'Enter') {
+                document.getElementById('chat-area').innerHTML = document.getElementById('chat-area').innerHTML +
+                    '<div class="chat-box text-end">' +
+                    '<span class="penerima rounded-pill p-2 px-3 border">' +
+                    document.getElementById('input-chat').value +
+                    '</span>' +
+                    '</div><br>';
+                document.getElementById('input-chat').value = '';
+            }
+        }
+    </script>
+
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="splide/dist/js/splide.min.js"></script>
+    <script src="swiper/swiper-bundle.min.js"></script>
+    <script src="assets/js/script.js"></script>
+
+</body>
+
+</html>

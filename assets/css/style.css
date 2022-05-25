@@ -1,0 +1,297 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+/* <i class="fas fa-search text-secondary" style="font-size: 16px;"></i>
+                    <input type="text" class="form-control border-0" placeholder="Search ..."> */
+#header {
+    background-color: #00AA13;
+    /* background-color: #80c7ff; */
+    /* border-radius: 0 0 18px 18px; */
+}
+
+#header.show-shadow {
+    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+#logo {
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+
+.form-search {
+    border-radius: 8px;
+}
+
+#search-top {
+    width: 80%;
+    position: absolute;
+    opacity: 0;
+    transition: ease all 0.1s;
+}
+
+#search-top.show {
+    opacity: 1;
+}
+
+#search-bottom {
+    border-radius: 0 0 24px 24px;
+    margin-top: 40px;
+    background-color: #00AA13;
+}
+
+.icon::before {
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+}
+
+.form-search::before {
+    font: var(--fa-font-solid);
+    content: "\f002";
+    color: grey;
+}
+
+.tps::before {
+    font: var(--fa-font-solid);
+    content: "\f1ea";
+}
+
+.splide__arrows {
+    display: none;
+}
+
+.splide .banner-items {
+    margin-right: 14px;
+}
+
+/* #splide01-slide01 {
+    margin-left: 28px;
+} */
+
+.splide .banner-items img {
+    width: 280px;
+    height: 150px;
+    border-radius: 12px;
+}
+
+.swiper {
+    width: 100%;
+    height: 160px;
+    background-color: #99d2ff;
+    border-radius: 16px;
+}
+
+.menus-icon {
+    height: 50px;
+    width: 50px;
+    border-radius: 8px;
+    background-color: white;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    padding: 6px;
+}
+
+.menus-icon img {
+    width: 40px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.menus-text {
+    font-size: 12px;
+    text-align: center;
+}
+
+#produk .image-items {
+    height: 155px;
+}
+
+#produk .list-item {
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+}
+
+.text-harga {
+    font-size: 14px;
+}
+
+#bottom-nav {
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    background-color: white;
+}
+
+#bottom-nav .tabs-icon i {
+    font-size: 18px;
+    text-align: center;
+}
+
+#bottom-nav .tabs-text {
+    font-size: 10px;
+    font-weight: bold;
+}
+
+.tabs a {
+    color: grey;
+}
+
+.tabs a.active {
+    color: #00AA13;
+}
+
+.card-title {
+    font-size: 14px;
+}
+
+.card-body small,
+.card-footer small {
+    font-size: 12px;
+}
+
+.multi-line-truncate {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+}
+
+/* style halaman chat */
+.list-group-item .list-right img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    aspect-ratio: 1/1;
+}
+
+.list-group-item .list-center {
+    padding: 0px 8px;
+    font-size: 14px;
+    width: 100%;
+}
+
+/* style halaman pesan */
+#chat-area {
+    font-size: 14px;
+}
+
+#chat-area .chat-box .penerima {
+    background-color: aquamarine;
+    max-width: 50%;
+}
+
+#chat-area .chat-box .pengirim {
+    max-width: 50%;
+}
+
+/* style halaman transaksi */
+.card-transaksi {
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    border-radius: 8px;
+}
+
+.card-transaksi .card-header {
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.card-transaksi .card-body {
+    font-size: 14px;
+}
+
+.card-transaksi .card-footer {
+    font-size: 14px;
+}
+
+.time-line-box {
+    padding: 100px 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 18px 0px;
+}
+
+.time-line-box {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+}
+
+.time-line-box .timestamp {
+    margin: auto;
+    margin-bottom: 5px;
+    padding: 0px 4px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.time-line-box .status {
+    padding: 0px 30px;
+    display: flex;
+    justify-content: center;
+    border-top: 3px solid #455EFC;
+    position: relative;
+    transition: all 200ms ease-in;
+}
+
+.time-line-box .status span {
+    padding-top: 8px;
+}
+
+.time-line-box .status span:before {
+    content: '';
+    width: 12px;
+    height: 12px;
+    background-color: #455EFC;
+    border-radius: 12px;
+    border: 2px solid #455EFC;
+    position: absolute;
+    left: 50%;
+    top: 0%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    transition: all 200ms ease-in;
+}
+
+/* style halaman profile */
+.menu-item {
+    font-size: 14px;
+}
+
+/* style halaman detail produk */
+#detail-produk .image-detail img {
+    width: 100%;
+    height: 300px;
+}
+
+#detail-produk .toko .image-toko img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    aspect-ratio: 1/1;
+    border: 1px solid grey;
+}
+
+/* style halaman keranjang */
+#keranjang img {
+    width: 80px;
+}
+
+#keranjang .list-keranjang {
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+/* style halaman upload-produk */
+#upload-produk {
+    font-size: 14px;
+}
+
+#upload-produk .image-produk img {
+    height: 220px;
+}

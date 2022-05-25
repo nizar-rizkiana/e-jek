@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keranjang</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="splide/dist/css/splide.min.css">
+    <link rel="stylesheet" href="swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <div class="col-12 col-md-4 mx-auto" style="background-color: #F8F8F8;">
+        <div id="header" class="p-3 fixed-top">
+            <div class="d-flex align-items-center">
+                <i class="fas fa-arrow-left text-white" onclick="goBack()"></i>
+                <div id="logo" class="mx-auto">
+                    Keranjang
+                </div>
+            </div>
+
+        </div>
+        <br>
+        <br>
+        <br>
+        <div id="keranjang" class="container">
+            <!-- card keranjang untuk satu toko -->
+            <div class="card satu-toko mb-3">
+                <div class="card-header bg-transparent d-flex align-items-center justify-content-between">
+                    <div class="checkbox-toko">
+                        <input type="checkbox" id="toko-nizar" name="produk" value="" class="check-toko">&nbsp;<label
+                            for="" style="font-size: 14px; font-weight: bold;">Toko Nizar</label>
+                    </div>
+                    <i class="fas fa-chevron-right text-secondary"></i>
+                </div>
+                <div class="card-body">
+                    <div class="list-keranjang d-flex p-2 mb-2 bg-white produk1">
+                        <div>
+                            <input type="checkbox" name="produk" value="" id="toko-nizar1"
+                                class="satu-toko check-produk toko-nizar1" disabled>
+                        </div>
+                        <div class="ms-2">
+                            <img src="assets/image/daging.png" alt="">
+                        </div>
+                        <div class="produk-keranjang ms-2 w-100">
+                            <p class="mb-0">Daging Ayam Segar 1Kg</p>
+                            <p class="fw-bold">Rp. <span id="harga1" class="text-harga">50000</span></p>
+                            <div class="aksi d-flex justify-content-between">
+                                <div class="qty">
+                                    <i id="kurang1" class="fas fa-minus-circle text-secondary qty-min"></i>&nbsp;
+                                    <span id="qty1" class="text-qty fw-bold">1</span>&nbsp;
+                                    <i id="tambah1" class="fas fa-plus-circle text-secondary qty-plus"></i>
+                                </div>
+                                <div class="hapus1">
+                                    <i class="fas fa-trash-alt text-secondary"></i>
+                                </div>
+
+                            </div>
+                        </div>
+                        <script>
+                            // tombol tambah
+                            document.getElementById('tambah1').onclick = function () {
+                                document.getElementById('qty1').innerText = parseInt(document.getElementById('qty1')
+                                    .textContent) + 1;
+                                if (document.getElementById('total-harga') != '0' && document.getElementById(
+                                        'toko-nizar1').checked) {
+                                    document.getElementById('total-harga').innerHTML = parseInt(document
+                                        .getElementById('total-harga').textContent) + parseInt(document
+                                        .getElementById('harga1').textContent);
+                                }
+                            }
+                            // tombol kurang
+                            document.getElementById('kurang1').onclick = function () {
+                                if (document.getElementById('qty1').textContent != 1) {
+                                    document.getElementById('qty1').innerText = parseInt(document.getElementById(
+                                            'qty1')
+                                        .textContent) - 1;
+                                    if (document.getElementById('total-harga') != '0' && document.getElementById(
+                                            'toko-nizar1').checked) {
+                                        document.getElementById('total-harga').innerHTML = parseInt(document
+                                            .getElementById('total-harga').textContent) - parseInt(document
+                                            .getElementById('harga1').textContent);
+                                    }
+                                }
+                            }
+
+                            // tombol hapus
+                            document.querySelector('.hapus1').onclick = function () {
+                                if (parseInt(document.getElementById('total-harga').textContent) != 0) {
+                                    document.getElementById('total-harga').innerHTML = parseInt(document
+                                        .getElementById('total-harga').textContent) - (parseInt(document
+                                        .getElementById('harga1').textContent) * parseInt(document
+                                        .getElementById('qty1').textContent));
+                                }
+                                document.querySelector('.produk1').remove()
+                            }
+                        </script>
+                    </div>
+                    <div class="list-keranjang d-flex p-2 mb-2 bg-white produk2">
+                        <div>
+                            <input type="checkbox" name="produk" value="" id="toko-nizar2"
+                                class="satu-toko check-produk satu-toko-nizar" disabled>
+                        </div>
+                        <div class="ms-2">
+                            <img src="assets/image/telur.png" alt="">
+                        </div>
+                        <div class="produk-keranjang ms-2 w-100">
+                            <p class="mb-0">Daging Ayam Segar 1Kg</p>
+                            <p class="fw-bold">Rp. <span id="harga2" class="text-harga">40000</span></p>
+                            <div class="aksi d-flex justify-content-between">
+                                <div class="qty">
+                                    <i id="kurang2" class="fas fa-minus-circle text-secondary qty-min"></i>&nbsp;
+                                    <span id="qty2" class="text-qty fw-bold">1</span>&nbsp;
+                                    <i id="tambah2" class="fas fa-plus-circle text-secondary qty-plus"></i>
+                                </div>
+                                <div class="hapus2">
+                                    <i class="fas fa-trash-alt text-secondary"></i>
+                                </div>
+
+                            </div>
+                        </div>
+                        <script>
+                            // tombol tambah
+                            document.getElementById('tambah2').onclick = function () {
+                                document.getElementById('qty2').innerText = parseInt(document.getElementById('qty2')
+                                    .textContent) + 1;
+                                if (document.getElementById('total-harga') != '0' && document.getElementById(
+                                        'toko-nizar2').checked) {
+                                    document.getElementById('total-harga').innerHTML = parseInt(document
+                                        .getElementById('total-harga').textContent) + parseInt(document
+                                        .getElementById('harga2').textContent);
+                                }
+                            }
+                            // tombol kurang
+                            document.getElementById('kurang2').onclick = function () {
+                                if (document.getElementById('qty2').textContent != 1) {
+                                    document.getElementById('qty2').innerText = parseInt(document.getElementById(
+                                            'qty2')
+                                        .textContent) - 1;
+                                    if (document.getElementById('total-harga') != '0' && document.getElementById(
+                                            'toko-nizar2').checked) {
+                                        document.getElementById('total-harga').innerHTML = parseInt(document
+                                            .getElementById('total-harga').textContent) - parseInt(document
+                                            .getElementById('harga2').textContent);
+                                    }
+                                }
+                            }
+
+                            // tombol hapus
+                            document.querySelector('.hapus2').onclick = function () {
+                                if (parseInt(document
+                                        .getElementById('total-harga').textContent) != 0) {
+                                    document.getElementById('total-harga').innerHTML = parseInt(document
+                                        .getElementById('total-harga').textContent) - (parseInt(document
+                                        .getElementById('harga2').textContent) * parseInt(document
+                                        .getElementById('qty2').textContent));
+                                }
+                                document.querySelector('.produk2').remove()
+                            }
+                        </script>
+                    </div>
+                </div>
+                <script>
+                    document.getElementById('toko-nizar').addEventListener('click', function () {
+                        if (document.getElementById('toko-nizar1')) {
+                            document.getElementById('toko-nizar1').checked = document.getElementById(
+                                'toko-nizar').checked
+                            if (document.getElementById('toko-nizar').checked) {
+                                document.getElementById('total-harga').innerHTML = parseInt(document
+                                    .getElementById('total-harga').textContent) + (parseInt(document
+                                    .getElementById('harga1').textContent) * parseInt(document
+                                    .getElementById('qty1').textContent));
+                            } else if (parseInt(document.getElementById('total-harga').textContent) != 0) {
+                                document.getElementById('total-harga').innerHTML = parseInt(document
+                                    .getElementById('total-harga').textContent) - (parseInt(document
+                                    .getElementById('harga1').textContent) * parseInt(document
+                                    .getElementById('qty1').textContent));
+                            }
+                        }
+                        if (document.getElementById('toko-nizar2')) {
+                            document.getElementById('toko-nizar2').checked = document.getElementById(
+                                'toko-nizar').checked
+                            if (document.getElementById('toko-nizar').checked) {
+                                document.getElementById('total-harga').innerHTML = parseInt(document
+                                    .getElementById('total-harga').textContent) + (parseInt(document
+                                    .getElementById('harga2').textContent) * parseInt(document
+                                    .getElementById('qty2').textContent));
+                            } else if (parseInt(document.getElementById('total-harga').textContent) != 0) {
+                                document.getElementById('total-harga').innerHTML = parseInt(document
+                                    .getElementById('total-harga').textContent) - (parseInt(document
+                                    .getElementById('harga2').textContent) * parseInt(document
+                                    .getElementById('qty2').textContent));
+                            }
+                        }
+                    });
+                </script>
+            </div>
+
+
+            <!-- list keranjang untuk satu produk -->
+            <div class="list-keranjang d-flex p-2 mb-2 bg-white produk3">
+                <div>
+                    <input type="checkbox" name="produk" value="" id="toko-orang" class="toko-beda check-produk">
+                </div>
+                <div class="ms-2">
+                    <img src="assets/image/jus.png" alt="">
+                </div>
+                <div class="produk-keranjang ms-2 w-100">
+                    <p class="mb-0">Jus jeruk peras segar</p>
+                    <p class="fw-bold">Rp. <span id="harga3" class="text-harga">20000</span></p>
+                    <div class="aksi d-flex justify-content-between">
+                        <div class="qty">
+                            <i id="kurang3" class="fas fa-minus-circle text-secondary qty-min"></i>&nbsp;
+                            <span id="qty3" class="text-qty fw-bold">1</span>&nbsp;
+                            <i id="tambah3" class="fas fa-plus-circle text-secondary qty-plus"></i>
+                        </div>
+                        <div class="hapus3">
+                            <i class="fas fa-trash-alt text-secondary"></i>
+                        </div>
+
+                    </div>
+                </div>
+                <script>
+                    document.getElementById('toko-orang').onclick = function () {
+                        if (document.getElementById('toko-orang').checked) {
+                            document.getElementById('total-harga').innerHTML = parseInt(document
+                                .getElementById('total-harga').textContent) + (parseInt(document
+                                .getElementById('harga3').textContent) * parseInt(document
+                                .getElementById('qty3').textContent));
+
+                        } else if (parseInt(document.getElementById('total-harga').textContent) != 0) {
+                            document.getElementById('total-harga').innerHTML = parseInt(document
+                                .getElementById('total-harga').textContent) - (parseInt(document
+                                .getElementById('harga3').textContent) * parseInt(document
+                                .getElementById('qty3').textContent));
+                        }
+                    }
+
+                    // tombol tambah
+                    document.getElementById('tambah3').onclick = function () {
+                        document.getElementById('qty3').innerText = parseInt(document.getElementById(
+                                'qty3')
+                            .textContent) + 1;
+                        if (document.getElementById('total-harga') != '0' && document.getElementById(
+                                'toko-orang').checked) {
+                            document.getElementById('total-harga').innerHTML = parseInt(document
+                                .getElementById('total-harga').textContent) + parseInt(document
+                                .getElementById('harga3').textContent);
+                        }
+                    }
+                    // tombol kurang
+                    document.getElementById('kurang3').onclick = function () {
+                        if (document.getElementById('qty3').textContent != 1) {
+                            document.getElementById('qty3').innerText = parseInt(document
+                                .getElementById(
+                                    'qty3')
+                                .textContent) - 1;
+                            if (document.getElementById('total-harga') != '0' && document
+                                .getElementById(
+                                    'toko-orang').checked) {
+                                document.getElementById('total-harga').innerHTML = parseInt(document
+                                    .getElementById('total-harga').textContent) - parseInt(document
+                                    .getElementById('harga3').textContent);
+                            }
+                        }
+                    }
+
+                    // tombol hapus
+                    document.querySelector('.hapus3').onclick = function () {
+                        if (parseInt(document
+                                .getElementById('total-harga').textContent) != 0) {
+                            document.getElementById('total-harga').innerHTML = parseInt(document
+                                .getElementById('total-harga').textContent) - (parseInt(document
+                                .getElementById('harga3').textContent) * parseInt(document
+                                .getElementById('qty3').textContent));
+                        }
+                        document.querySelector('.produk3').remove()
+                    }
+                </script>
+            </div>
+
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <div class="checkout fixed-bottom bg-white p-3 border-top">
+            <div class=" d-flex justify-content-between">
+                <div class="subtotal">
+                    <span style="font-size: 14px;">Total</span><br>
+                    <span class="fw-bold" style="font-size: 14px;">Rp. <span id="total-harga">0</span></span>
+                </div>
+                <a href="checkout.html" class="btn w-50 rounded-pill my-2 text-white fw-bold"
+                    style="background-color: #40dc4e;">Checkout</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="splide/dist/js/splide.min.js"></script>
+    <script src="swiper/swiper-bundle.min.js"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>

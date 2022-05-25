@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buka Toko</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="splide/dist/css/splide.min.css">
+    <link rel="stylesheet" href="swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <div class="col-12 col-md-4 mx-auto" style="background-color: #FFFBFF;">
+        <div id="header" class="p-3 fixed-top">
+            <div class="d-flex align-items-center col-md-4 mx-md-auto">
+                <i class="fas fa-arrow-left text-white me-3" onclick="goBack()"></i>
+                <div id="logo">
+                    Update Produk
+                </div>
+            </div>
+
+        </div>
+        <br>
+
+        <div id="upload-produk" class="container bg-white">
+            <br>
+            <br>
+            <div class="image-produk">
+                <img src="assets/image/burger.png" alt="" width="100%">
+            </div>
+            <form action="">
+                <div class="row mb-3">
+                    <label for="foto" class="col-sm-2 col-form-label">Pilih Foto</label>
+                    <div class="col-sm-10">
+                        <input type="file" class="form-control" id="foto">
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <label for="nama" class="col-sm-2 col-form-label">Nama produk</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="nama" placeholder="Nama produk..."
+                            value="Burger extra plus cola">
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <label for="harga" class="col-sm-2 col-form-label">Harga produk</label>
+                    <div class="col-sm-10 input-group">
+                        <span class="input-group-text">Rp.</span>
+                        <input type="number" class="form-control" id="harga" placeholder="100000" value="70000">
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <label for="deskripsi" class="col-sm-2 col-form-label">Deskripsi produk</label>
+                    <div class="col-sm-10">
+                        <textarea name="deskripsi" id="deskripsi" rows="10" class="w-100 p-2"
+                            placeholder="Deskripsi produk...">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti veritatis dolorem tenetur quis sit impedit, alias reiciendis, quidem unde suscipit dignissimos repudiandae, ipsa cupiditate fugit ipsum saepe eos itaque nostrum!</textarea>
+                    </div>
+                </div>
+                <a href="toko-saya.html" class="btn btn-success w-100">Update Produk</a>
+            </form>
+
+
+        </div>
+        <br>
+
+    </div>
+
+
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="splide/dist/js/splide.min.js"></script>
+    <script src="swiper/swiper-bundle.min.js"></script>
+    <script src="assets/js/script.js"></script>
+
+</body>
+
+</html>
